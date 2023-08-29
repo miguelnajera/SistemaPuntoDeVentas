@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.tabVentasMainForm = new System.Windows.Forms.TabPage();
@@ -37,6 +38,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabRegistroClientes = new System.Windows.Forms.TabPage();
+            this.btnCancelarFormulario = new System.Windows.Forms.Button();
+            this.btnAgregarCliente = new System.Windows.Forms.Button();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.lblDireccionCliente = new System.Windows.Forms.Label();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
             this.lblTelefonoCliente = new System.Windows.Forms.Label();
             this.txtEmailCliente = new System.Windows.Forms.TextBox();
@@ -49,26 +54,21 @@
             this.lblIDCliente = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbFotoCliente = new System.Windows.Forms.PictureBox();
             this.tabCreditoClientes = new System.Windows.Forms.TabPage();
             this.tabReportesClientes = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.lblDireccionCliente = new System.Windows.Forms.Label();
-            this.pbFotoCliente = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClientes = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlPrincipal.SuspendLayout();
             this.tabClientesMainForm.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabRegistroClientes.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -83,6 +83,16 @@
             this.groupBox1.Size = new System.Drawing.Size(729, 67);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sistema_Punto_De_Venta.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -168,8 +178,8 @@
             // 
             // tabRegistroClientes
             // 
-            this.tabRegistroClientes.Controls.Add(this.button2);
-            this.tabRegistroClientes.Controls.Add(this.button1);
+            this.tabRegistroClientes.Controls.Add(this.btnCancelarFormulario);
+            this.tabRegistroClientes.Controls.Add(this.btnAgregarCliente);
             this.tabRegistroClientes.Controls.Add(this.txtDireccion);
             this.tabRegistroClientes.Controls.Add(this.lblDireccionCliente);
             this.tabRegistroClientes.Controls.Add(this.txtTelefonoCliente);
@@ -191,12 +201,51 @@
             this.tabRegistroClientes.Text = "Registro Clientes";
             this.tabRegistroClientes.UseVisualStyleBackColor = true;
             // 
+            // btnCancelarFormulario
+            // 
+            this.btnCancelarFormulario.BackgroundImage = global::Sistema_Punto_De_Venta.Properties.Resources.icono_cancelar2_48x48;
+            this.btnCancelarFormulario.FlatAppearance.BorderSize = 0;
+            this.btnCancelarFormulario.Location = new System.Drawing.Point(112, 278);
+            this.btnCancelarFormulario.Name = "btnCancelarFormulario";
+            this.btnCancelarFormulario.Size = new System.Drawing.Size(49, 48);
+            this.btnCancelarFormulario.TabIndex = 14;
+            this.btnCancelarFormulario.UseVisualStyleBackColor = true;
+            this.btnCancelarFormulario.Click += new System.EventHandler(this.btnCancelarFormulario_Click);
+            // 
+            // btnAgregarCliente
+            // 
+            this.btnAgregarCliente.BackgroundImage = global::Sistema_Punto_De_Venta.Properties.Resources.icono_add_cliente_48x48;
+            this.btnAgregarCliente.FlatAppearance.BorderSize = 0;
+            this.btnAgregarCliente.Location = new System.Drawing.Point(47, 278);
+            this.btnAgregarCliente.Name = "btnAgregarCliente";
+            this.btnAgregarCliente.Size = new System.Drawing.Size(49, 48);
+            this.btnAgregarCliente.TabIndex = 13;
+            this.btnAgregarCliente.UseVisualStyleBackColor = true;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(123, 242);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
+            this.txtDireccion.TabIndex = 7;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
+            // 
+            // lblDireccionCliente
+            // 
+            this.lblDireccionCliente.AutoSize = true;
+            this.lblDireccionCliente.Location = new System.Drawing.Point(123, 225);
+            this.lblDireccionCliente.Name = "lblDireccionCliente";
+            this.lblDireccionCliente.Size = new System.Drawing.Size(52, 13);
+            this.lblDireccionCliente.TabIndex = 11;
+            this.lblDireccionCliente.Text = "Direccion";
+            // 
             // txtTelefonoCliente
             // 
             this.txtTelefonoCliente.Location = new System.Drawing.Point(7, 242);
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
             this.txtTelefonoCliente.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefonoCliente.TabIndex = 10;
+            this.txtTelefonoCliente.TabIndex = 6;
             this.txtTelefonoCliente.TextChanged += new System.EventHandler(this.txtTelefonoCliente_TextChanged);
             this.txtTelefonoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefonoCliente_KeyPress);
             // 
@@ -214,7 +263,7 @@
             this.txtEmailCliente.Location = new System.Drawing.Point(123, 201);
             this.txtEmailCliente.Name = "txtEmailCliente";
             this.txtEmailCliente.Size = new System.Drawing.Size(100, 20);
-            this.txtEmailCliente.TabIndex = 8;
+            this.txtEmailCliente.TabIndex = 5;
             this.txtEmailCliente.TextChanged += new System.EventHandler(this.txtEmailCliente_TextChanged);
             // 
             // lblEmailCliente
@@ -231,7 +280,7 @@
             this.txtApellidosCliente.Location = new System.Drawing.Point(7, 201);
             this.txtApellidosCliente.Name = "txtApellidosCliente";
             this.txtApellidosCliente.Size = new System.Drawing.Size(100, 20);
-            this.txtApellidosCliente.TabIndex = 6;
+            this.txtApellidosCliente.TabIndex = 4;
             this.txtApellidosCliente.TextChanged += new System.EventHandler(this.txtApellidosCliente_TextChanged);
             this.txtApellidosCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidosCliente_KeyPress);
             // 
@@ -249,7 +298,7 @@
             this.txtNombreCliente.Location = new System.Drawing.Point(123, 157);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreCliente.TabIndex = 4;
+            this.txtNombreCliente.TabIndex = 3;
             this.txtNombreCliente.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
             this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
             // 
@@ -300,6 +349,18 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Informacion Cliente";
             // 
+            // pbFotoCliente
+            // 
+            this.pbFotoCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFotoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbFotoCliente.Location = new System.Drawing.Point(36, 28);
+            this.pbFotoCliente.Name = "pbFotoCliente";
+            this.pbFotoCliente.Size = new System.Drawing.Size(91, 78);
+            this.pbFotoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFotoCliente.TabIndex = 0;
+            this.pbFotoCliente.TabStop = false;
+            this.pbFotoCliente.Click += new System.EventHandler(this.pbFotoCliente_Click);
+            // 
             // tabCreditoClientes
             // 
             this.tabCreditoClientes.Location = new System.Drawing.Point(4, 22);
@@ -330,45 +391,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(123, 242);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
-            this.txtDireccion.TabIndex = 12;
-            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
-            // 
-            // lblDireccionCliente
-            // 
-            this.lblDireccionCliente.AutoSize = true;
-            this.lblDireccionCliente.Location = new System.Drawing.Point(123, 225);
-            this.lblDireccionCliente.Name = "lblDireccionCliente";
-            this.lblDireccionCliente.Size = new System.Drawing.Size(52, 13);
-            this.lblDireccionCliente.TabIndex = 11;
-            this.lblDireccionCliente.Text = "Direccion";
-            // 
-            // pbFotoCliente
-            // 
-            this.pbFotoCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFotoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbFotoCliente.Location = new System.Drawing.Point(36, 28);
-            this.pbFotoCliente.Name = "pbFotoCliente";
-            this.pbFotoCliente.Size = new System.Drawing.Size(91, 78);
-            this.pbFotoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFotoCliente.TabIndex = 0;
-            this.pbFotoCliente.TabStop = false;
-            this.pbFotoCliente.Click += new System.EventHandler(this.pbFotoCliente_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Sistema_Punto_De_Venta.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnClientes
             // 
             this.btnClientes.BackgroundImage = global::Sistema_Punto_De_Venta.Properties.Resources.icono_clientes_48x48;
@@ -380,26 +402,6 @@
             this.btnClientes.TabIndex = 0;
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::Sistema_Punto_De_Venta.Properties.Resources.icono_add_cliente_48x48;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(47, 278);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 48);
-            this.button1.TabIndex = 13;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::Sistema_Punto_De_Venta.Properties.Resources.icono_cancelar2_48x48;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Location = new System.Drawing.Point(112, 278);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 48);
-            this.button2.TabIndex = 14;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmLogin
             // 
@@ -416,6 +418,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControlPrincipal.ResumeLayout(false);
             this.tabClientesMainForm.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -424,9 +427,8 @@
             this.tabRegistroClientes.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -461,8 +463,8 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label lblDireccionCliente;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelarFormulario;
+        private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.Button btnClientes;
     }
 }

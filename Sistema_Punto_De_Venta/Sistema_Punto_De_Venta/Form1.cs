@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewModels;
 using ViewModels.Library;
 
 namespace Sistema_Punto_De_Venta
@@ -16,11 +17,32 @@ namespace Sistema_Punto_De_Venta
         public frmLogin()
         {
             InitializeComponent();
-        }       
-        
+        }
+
         #region CodigoClientes
+
+        private ClientesVM oCliente;
         private void btnClientes_Click(object sender, EventArgs e)
         {
+            //Crea una coleccion de objetos de tipo textbox
+            //Toma los valores de las cajas de texto como si fueran atributos de una clase.
+            var lstClientesTexbox = new List<TextBox>();
+            lstClientesTexbox.Add(txtIDCliente);
+            lstClientesTexbox.Add(txtNombreCliente);
+            lstClientesTexbox.Add(txtApellidosCliente);
+            lstClientesTexbox.Add(txtTelefonoCliente);
+            lstClientesTexbox.Add(txtDireccion);
+
+            var lstClientesLabel = new List<Label>();
+
+            lstClientesLabel.Add(lblIDCliente);
+            lstClientesLabel.Add(lblNombreCliente);
+            lstClientesLabel.Add(lblApellidoCliente);
+            lstClientesLabel.Add(lblTelefonoCliente);
+            lstClientesLabel.Add(lblDireccionCliente);
+
+            oCliente = new ClientesVM(lstClientesTexbox, lstClientesLabel);
+
             tabControlPrincipal.SelectedIndex = 1;
         }
 
@@ -41,6 +63,7 @@ namespace Sistema_Punto_De_Venta
             }
             else
             {
+                lblIDCliente.Text = "ID";
                 lblIDCliente.ForeColor= Color.Green;
             }
         }
@@ -59,6 +82,7 @@ namespace Sistema_Punto_De_Venta
             }
             else
             {
+                lblNombreCliente.Text = "Nombre";
                 lblNombreCliente.ForeColor = Color.Green;
             }
         }
@@ -78,6 +102,7 @@ namespace Sistema_Punto_De_Venta
             }
             else
             {
+                lblApellidoCliente.Text = "Apellidos";
                 lblApellidoCliente.ForeColor = Color.Green;
             }
         }
@@ -111,6 +136,7 @@ namespace Sistema_Punto_De_Venta
             }
             else
             {
+                lblTelefonoCliente.Text = "Telefono";
                 lblTelefonoCliente.ForeColor = Color.Green;
             }
         }
@@ -129,11 +155,24 @@ namespace Sistema_Punto_De_Venta
             }
             else
             {
+                lblDireccionCliente.Text = "Direccion";
                 lblDireccionCliente.ForeColor = Color.Green;
             }
 
         }
 
+
+        //Eventos Click de los botones en el formulario registro de clientes
+
+        private void btnAgregarCliente_Click(object sender, EventArgs e)
+        {
+            oCliente.guardarCliente();
+        }
+
+        private void btnCancelarFormulario_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
 
