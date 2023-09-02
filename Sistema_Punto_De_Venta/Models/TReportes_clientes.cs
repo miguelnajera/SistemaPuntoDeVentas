@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinqToDB.Mapping;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,13 @@ namespace Models
 {
     public class TReportes_clientes
     {
+        [PrimaryKey, Identity]
+        public int IdReport { set; get; }
+        public string Pago { set; get; }
+        public string FecahaPago { set; get; }
+        public string Deuda { set; get; }
+        public string FechaDeuda { set; get; }
+        public string Ticket { set; get; }
+        public int IdCliente { set; get; }
     }
 }
