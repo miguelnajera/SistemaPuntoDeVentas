@@ -10,7 +10,7 @@ namespace Models.Conexion
 {
     public class Conexion : DataConnection
     {
-        public Conexion() : base("PDHN1") { }
+        public Conexion() : base("PDHN2") { }
         public ITable<TClientes> TClientes => this.GetTable<TClientes>();
         public ITable<TReportes_clientes> TReportes_clientes => this.GetTable<TReportes_clientes>(); 
     }

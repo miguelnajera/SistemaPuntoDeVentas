@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,11 @@ namespace ViewModels.Library
 
         }
 
+
+        public bool comprobarFormatoEmail(string email)
+        {
+            return new EmailAddressAttribute().IsValid(email);
+        }
 
     }
 }

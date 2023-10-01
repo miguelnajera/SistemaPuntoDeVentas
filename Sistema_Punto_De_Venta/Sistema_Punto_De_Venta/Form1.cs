@@ -30,18 +30,25 @@ namespace Sistema_Punto_De_Venta
             lstClientesTexbox.Add(txtIDCliente);
             lstClientesTexbox.Add(txtNombreCliente);
             lstClientesTexbox.Add(txtApellidosCliente);
+            lstClientesTexbox.Add(txtEmailCliente);
             lstClientesTexbox.Add(txtTelefonoCliente);
             lstClientesTexbox.Add(txtDireccion);
-
             var lstClientesLabel = new List<Label>();
 
             lstClientesLabel.Add(lblIDCliente);
             lstClientesLabel.Add(lblNombreCliente);
             lstClientesLabel.Add(lblApellidoCliente);
+            lstClientesLabel.Add(lblEmailCliente);
             lstClientesLabel.Add(lblTelefonoCliente);
             lstClientesLabel.Add(lblDireccionCliente);
 
-            oCliente = new ClientesVM(lstClientesTexbox, lstClientesLabel);
+
+            object[] objetos = {
+                pbFotoCliente ,
+                chkCredito,
+                Properties.Resources.icono_add_cliente_48x48
+            };
+            oCliente = new ClientesVM(objetos, lstClientesTexbox, lstClientesLabel);
 
             tabControlPrincipal.SelectedIndex = 1;
         }
@@ -122,7 +129,8 @@ namespace Sistema_Punto_De_Venta
             }
             else
             {
-                lblEmailCliente.ForeColor = Color.Green;
+                lblTelefonoCliente.Text = "Email";
+                lblTelefonoCliente.ForeColor = Color.Green;
             }
 
         }

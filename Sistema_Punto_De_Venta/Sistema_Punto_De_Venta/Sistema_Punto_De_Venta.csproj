@@ -156,6 +156,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{75D14D04-4DD5-4F75-92FC-A3472380F8B1}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ViewModels\ViewModels.csproj">
       <Project>{2c682656-5a84-45cc-bf25-41537afe56f4}</Project>
       <Name>ViewModels</Name>

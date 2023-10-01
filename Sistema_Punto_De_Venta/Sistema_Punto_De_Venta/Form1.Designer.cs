@@ -59,6 +59,7 @@
             this.tabReportesClientes = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnClientes = new System.Windows.Forms.Button();
+            this.chkCredito = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlPrincipal.SuspendLayout();
@@ -178,6 +179,7 @@
             // 
             // tabRegistroClientes
             // 
+            this.tabRegistroClientes.Controls.Add(this.chkCredito);
             this.tabRegistroClientes.Controls.Add(this.btnCancelarFormulario);
             this.tabRegistroClientes.Controls.Add(this.btnAgregarCliente);
             this.tabRegistroClientes.Controls.Add(this.txtDireccion);
@@ -205,7 +207,7 @@
             // 
             this.btnCancelarFormulario.BackgroundImage = global::Sistema_Punto_De_Venta.Properties.Resources.icono_cancelar2_48x48;
             this.btnCancelarFormulario.FlatAppearance.BorderSize = 0;
-            this.btnCancelarFormulario.Location = new System.Drawing.Point(112, 278);
+            this.btnCancelarFormulario.Location = new System.Drawing.Point(112, 317);
             this.btnCancelarFormulario.Name = "btnCancelarFormulario";
             this.btnCancelarFormulario.Size = new System.Drawing.Size(49, 48);
             this.btnCancelarFormulario.TabIndex = 14;
@@ -216,7 +218,7 @@
             // 
             this.btnAgregarCliente.BackgroundImage = global::Sistema_Punto_De_Venta.Properties.Resources.icono_add_cliente_48x48;
             this.btnAgregarCliente.FlatAppearance.BorderSize = 0;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(47, 278);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(47, 317);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(49, 48);
             this.btnAgregarCliente.TabIndex = 13;
@@ -355,7 +357,7 @@
             this.pbFotoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbFotoCliente.Location = new System.Drawing.Point(36, 28);
             this.pbFotoCliente.Name = "pbFotoCliente";
-            this.pbFotoCliente.Size = new System.Drawing.Size(91, 78);
+            this.pbFotoCliente.Size = new System.Drawing.Size(90, 80);
             this.pbFotoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFotoCliente.TabIndex = 0;
             this.pbFotoCliente.TabStop = false;
@@ -402,6 +404,16 @@
             this.btnClientes.TabIndex = 0;
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // chkCredito
+            // 
+            this.chkCredito.AutoSize = true;
+            this.chkCredito.Location = new System.Drawing.Point(7, 273);
+            this.chkCredito.Name = "chkCredito";
+            this.chkCredito.Size = new System.Drawing.Size(89, 17);
+            this.chkCredito.TabIndex = 15;
+            this.chkCredito.Text = "Tiene Credito";
+            this.chkCredito.UseVisualStyleBackColor = true;
             // 
             // frmLogin
             // 
@@ -466,6 +478,7 @@
         private System.Windows.Forms.Button btnCancelarFormulario;
         private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.CheckBox chkCredito;
     }
 }
 
